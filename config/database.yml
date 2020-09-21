@@ -29,10 +29,10 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: twitter_redesign
+  username: jelil
 
   # The password associated with the postgres role (username).
-  #password:
+  password: <%= ENV['TWITTER_REDESIGN_DATABASE_PASSWORD'] %>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: twitter_redesign_production
-  username: twitter_redesign
+  username: jelil
   password: <%= ENV['TWITTER_REDESIGN_DATABASE_PASSWORD'] %>
