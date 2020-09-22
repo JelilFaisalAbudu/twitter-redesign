@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TwitterRedesign</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>TwitterRedesign</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header class="header side-nav left-column">
+    <%= render 'shared/left_side_navbar'%>
+  </header>
+  <div class="right-column">
+    <div class="top-navbar-container">
+      <div class="container-fluid">
+        <%= render 'shared/top_navbar'%>
+      </div>
+    </div>
+    <main>
+      <div class="container-fluid">
+        <%= yield %>
+      </div>
+    </main>
+    <footer>
+      <div class="container-fluid">
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>
