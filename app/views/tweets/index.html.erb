@@ -1,27 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="col-9">
+  <section class="main-headers">
+    <div class="">
+    <span>Tweet</span>
+    <span>Photo</span>
+    <span>Vdeos</span>
+  </div>
+  </section>
+  <section class="feed-setion">
+    <%= render 'feed' %>
+  </section>
+  
 
-<h1>Tweets</h1>
+  
 
-<table>
-  <thead>
-    <tr>
-      <th>Tweet</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <br>
 
-  <tbody>
-    <% @tweets.each do |tweet| %>
-      <tr>
-        <td><%= tweet.tweet %></td>
-        <td><%= link_to 'Show', tweet %></td>
-        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <%= link_to 'New Tweet', new_tweet_path %>
+</div>
 
-<br>
-
-<%= link_to 'New Tweet', new_tweet_path %>
+<div class="col-3 who-to-follow">
+  <%= render 'who_to_follow' %>
+</div>
