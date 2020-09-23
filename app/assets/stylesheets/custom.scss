@@ -3,37 +3,97 @@ body {
 }
 
 .side-nav {
+  color: #5C7186;
   height: 100%;
-  width: 160px;
+  width: 15%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #213246;
   overflow-x: hidden;
-  padding-top: 20px;
+
+  * {
+    text-transform: uppercase;
+  }
+
+  .profile {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #1A2B3D;
+
+    .basic-details {
+      display: flex;
+      width: 100%;
+      padding: 1.6em 0 1.6em 1em;
+    }
+  }
+
+  img {
+    width: 60px;
+    border-radius: 7%;
+    margin-right: 0.5em;
+  }
 }
 
-.side-nav a {
+.followings {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	margin: 1.5em 0;
+}
+
+.followings .item {
+  color: #C2CEDA;
+  font-weight: bolder;
+  margin: 0;
+
+}
+
+.followings .item-label {
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.followings .item-group {
+
+  width: 50%;
+  margin: 0.6em 0;
+  
+  &:not(last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.125);
+  }
+}
+
+.side-nav .side-nav-item {
+  padding: 0.6em 0.6em 0.6em 1em;
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #5C7186;
   display: block;
+
 }
 
-.sid-enav a:hover {
-  color: #f1f1f1;
+.side-nav-item:focus {
+  background-color: #54ABEE;
+}
+
+.side-nav a:hover {
+  color: #FFFEFC;
 }
 
 .right-column {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  // font-size: 28px; /* Increased text to enable scrolling */
+	margin-left: 15.8em;
 }
 
 .top-navbar-container {
 	background-color: #54ABEE;
 }
+
 .card {
 	border: none;
 	background-color: #fff;
@@ -44,7 +104,25 @@ body {
 	background-color: #fff;
 }
 
-.who-tofollow {
+.who-to-follow {
 	background-color: #F5F6F8;
-	border-left: 1px solid rgba(0, 0, 0, 0.125);
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
+  
+  .main-headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-headers {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  color: #A2A3A5;
+  font-size: 1.6rem;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+}
+
+.main-headers > .header:not(last-child) {
+  margin-right: 1.3em;
 }
