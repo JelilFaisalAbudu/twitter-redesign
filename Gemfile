@@ -16,6 +16,9 @@ gem 'webpacker', '~> 5.x'
 
 # Use bootstrap gem for styling the page
 gem 'bootstrap', '~> 5.0.0.alpha1'
+
+# Use font awesome for icons
+gem 'font-awesome-sass'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
