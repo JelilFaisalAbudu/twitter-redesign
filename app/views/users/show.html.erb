@@ -1,2 +1,13 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="col-9">
+	<div class="cover-photo-container">
+		<img alt="cover-photo" src="https://picsum.photos/id/1/70/70" class="cover-photo img-fluid"
+			style="height: 320px; width: 100%">
+	</div>
+	<%= render 'shared/main_headers' %>
+	<section class="feed-setion">
+		<%= render 'user_feed' %>
+	</section>
+</div>
+<div class="col-3 who-to-follow">
+	<%= render 'user_social_profile' %>
+</div>
