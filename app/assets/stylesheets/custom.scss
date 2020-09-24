@@ -1,9 +1,9 @@
 body {
-	background-color: #F5F6F8 !important;
+  background-color: #f5f6f8 !important;
 }
 
 .side-nav {
-  color: #5C7186;
+  color: #5c7186;
   height: 100%;
   width: 15%;
   position: fixed;
@@ -21,7 +21,7 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
-    background-color: #1A2B3D;
+    background-color: #1a2b3d;
 
     .basic-details {
       display: flex;
@@ -37,20 +37,26 @@ body {
   }
 }
 
-.followings {
+.followings,
+.statistic {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.side-nav .followings {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	text-align: center;
-	margin: 1.5em 0;
+}
+
+.item,
+.item-label {
+  margin: 0;
 }
 
 .followings .item {
-  color: #C2CEDA;
+  color: #c2ceda;
   font-weight: bolder;
-  margin: 0;
-
 }
 
 .followings .item-label {
@@ -58,14 +64,22 @@ body {
   margin: 0;
 }
 
-.followings .item-group {
+.item-group {
+  border-right: 0.11em solid rgba(0, 0, 0, 0.125);
+}
 
+.item-group:last-child {
+  border-right: none;
+}
+
+.statistic .item-group {
+  flex-grow: 1;
+  padding: 1.3em 0;
+}
+
+.followings .item-group {
   width: 50%;
-  margin: 0.6em 0;
-  
-  &:not(last-child) {
-    border-right: 1px solid rgba(0, 0, 0, 0.125);
-  }
+  padding: 1.3em 0;
 }
 
 .side-nav .side-nav-item {
@@ -73,41 +87,50 @@ body {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #5C7186;
+  color: #5c7186;
   display: block;
-
 }
 
 .side-nav-item:focus {
-  background-color: #54ABEE;
+  background-color: #54abee;
 }
 
 .side-nav a:hover {
-  color: #FFFEFC;
+  color: #fffefc;
 }
 
 .right-column {
-	margin-left: 15.8em;
+  margin-left: 15.8em;
 }
 
 .top-navbar-container {
-	background-color: #54ABEE;
+  background-color: #54abee;
 }
 
 .card {
-	border: none;
-	background-color: #fff;
-	margin: 2rem auto;
+  border: none;
+  background-color: #fff;
+  margin: 2rem auto;
 }
 
-.card > .card-header {
-	background-color: #fff;
+.card > .card-header,
+.card .form-group > .card-header {
+  background-color: #fff;
+}
+
+.main-headers {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  color: #a2a3a5;
+  font-size: 1.6rem;
+  padding: 0.5em 0;
+  text-transform: uppercase;
 }
 
 .who-to-follow {
-	background-color: #F5F6F8;
+  background-color: #f5f6f8;
   border-left: 1px solid rgba(0, 0, 0, 0.125);
-  
+
   .main-headers {
     display: flex;
     justify-content: space-between;
@@ -115,14 +138,91 @@ body {
   }
 }
 
-.main-headers {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  color: #A2A3A5;
-  font-size: 1.6rem;
-  padding: 0.5em 0;
-  text-transform: uppercase;
+.header {
+  margin-right: 1.3em;
+  color: #a2a3a5;
 }
 
-.main-headers > .header:not(last-child) {
-  margin-right: 1.3em;
+.feed-section .header,
+.header:last-child {
+  margin-right: 0;
+}
+
+.new-tweet-header {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
+
+
+
+.social-profile .pic-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+.social-profile .profile-pic {
+  border-radius: 50%;
+  padding: 0.9em;
+  width: 40%;
+}
+
+.social-profile .fas {
+  color: #b8b9bb;
+  padding: 0.5em;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.social-profile .handle {
+  color: #babbbd;
+  margin: 0;
+}
+
+.social-profile > .bio .tag {
+  text-align: center;
+}
+
+.followed-by .bio .tag {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  .name {
+    color: #132235;
+    text-transform: uppercase;
+  }
+}
+
+.followed-by .profile-pic {
+  width: 30%;
+}
+
+.social-profile .bio .item-group {
+  border: none;
+}
+
+.social-profile > .statistic {
+  margin-top: 2.2em;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  width: 100%;
+}
+
+.social-profile .followed-by {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 0;
+}
+
+.social-profile .followed-by > .bio {
+  display: flex;
+  flex-grow: 1;
 }
