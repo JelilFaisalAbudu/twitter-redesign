@@ -1,22 +1,20 @@
-<%= form_with(model: tweet, local: true) do |form| %>
-  <% if tweet.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
+<div class="card border-0">
 
-      <ul>
-        <% tweet.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+  <%= form_with(model: tweet, local: true) do |form| %>
+
+  <div class="form-group">
+    <div class="header new-tweet-header">
+      <%= form.label :tweet, 'Start a new tweet'%>
     </div>
+    <div class="card-body">
+      <%= form.text_area :tweet, id: 'tweetFormControlTextarea1', class: 'form-control', row: '3' %>
+      <div class="form-group">
+        <%= form.submit 'Send', class: 'btn btn-primary my-2' %>
+      </div>
+    </div>
+  </div>
+
+
   <% end %>
 
-  <div class="field">
-    <%= form.label :tweet %>
-    <%= form.text_area :tweet %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
