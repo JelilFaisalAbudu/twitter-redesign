@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+  before_action :authorize_user
   before_action :set_tweet, only: %i[show edit update destroy]
 
   # GET /tweets
@@ -69,5 +70,11 @@ class TweetsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def tweet_params
     params.require(:tweet).permit(:tweet)
+  end
+
+  def authorize_user
+    return unless !logged_in?
+    flash[:alert] = 'You must sign in first'
+    redirect_to sign_in_path
   end
 end
