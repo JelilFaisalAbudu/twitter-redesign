@@ -1,9 +1,9 @@
 <div class="card border-0">
-	<div class="card-header">
+	<div class="header card-header tweets-header">
 		<h4 class="feed-title">Tweets</h4>
 	</div>
 	<div class="card-body">
-		
+		<% current_user.tweets.each do |tweet| %>
 			<p class="card-text">
 			<div class="row mb-4">
 				<div class=" col-12 mb-3">
@@ -15,16 +15,16 @@
 								title="nigel-farage">
 						</a>
 						<div class="info pl-4 pl-lg-2">
-							<p>My tweet I've written</p>
+							<%= tweet.Text %>
 							<div class="byline text-muted">
-								<p>24/09/2020</p>
+								<%= tweet.created_at.strftime("%a %m/%d/%y") %>
 							</div>
 						</div>
 					</article>
 				</div>
 			</div>
 		</p>
-		
+		<% end %>
 		
 	</div>
 </div>
