@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   resources :users
   resources :tweets
   root 'tweets#index'
