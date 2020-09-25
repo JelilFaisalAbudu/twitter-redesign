@@ -10,4 +10,12 @@ module ApplicationHelper
 	def display_side_nav
 		render '/shared/left_side_navbar' if logged_in?
 	end
+
+	def display_top_nav
+		if logged_in?
+			render 'shared/nav_after_signin'
+		else
+			render 'shared/signin_or_signup'
+		end
+	end
 end
