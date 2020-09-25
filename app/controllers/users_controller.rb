@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
+  before_action :set_user
+
   def new
     @user = User.new
   end
 
   def show
-    # @user = User.find(params[:id])
   end
 
   def create
@@ -22,5 +23,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:Usernme, :FullName, :Photo, :CoverImage)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 end
