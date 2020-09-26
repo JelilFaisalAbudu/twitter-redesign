@@ -13,10 +13,10 @@ class FollowingsController < ApplicationController
 	end
 
 	def destroy
-		@following = Following.find_by_Follwer_id_and_Followed_id(Follwer_id: current_user.id, Follwed_id: @user.id)
+		@following = Following.find_by_Follower_id_and_Followed_id(current_user,@user)
 		if @following.destroy
 			flash[:notice] = 'You no more follow this user.'
-			redirect_to followings_url
+			redirect_to user_path(@user)
 		else
 			flash[:alert] = 'Something went wrong. Try again'
 			redirect_to user_path(@user)
