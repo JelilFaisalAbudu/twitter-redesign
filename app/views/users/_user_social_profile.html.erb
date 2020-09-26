@@ -1,7 +1,10 @@
 <div class="social-profile">
 <div class="bio">
 	<div class="item-group pic-group">
-		<span class="item item-icon"><i class="fas fa-plus"></i></span>
+		<span class="item item-icon">
+			<%= display_follow_button_for(@user) %>
+			
+		</span>
 		<img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid">
 		<span class="item item-icon">
 			<i class="fas fa-list"></i>
