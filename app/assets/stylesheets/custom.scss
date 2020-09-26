@@ -37,6 +37,14 @@ body {
   }
 }
 
+.side-nav .profile .name {
+  color: #66788c;
+}
+
+.handle {
+  text-transform: none;
+}
+
 .followings,
 .statistic {
   display: flex;
@@ -46,7 +54,11 @@ body {
 }
 
 .side-nav .followings {
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: 0.21em solid #172830;
+}
+
+.side-nav .item-group {
+  border-right: 0.21em solid #172830;
 }
 
 .item,

@@ -2,8 +2,8 @@
 		<div class="basic-details">
 			<img alt=" profile-pic" src="https://picsum.photos/id/1/70/70">
 			<div class="tag">
-				<span class="name">Name</span>
-				<p class="handle">@handle</p>
+				<span class="name"><%= current_user.FullName %></span>
+				<p class="handle"><%= "@#{current_user.Username}" %></p>
 			</div>
 		</div>
 		<div class="followings">
@@ -18,7 +18,7 @@
 		</div>
 	</div>
 
-	<a class="side-nav-item" href="#about">Profile</a>
+	<%= link_to "Profile", user_path(current_user), class: 'side-nav-item' %>
 	<a class="side-nav-item" href="#services">Disciover</a>
 	<a class="side-nav-item" href="#clients">Connect</a>
 	<a class="side-nav-item" href="#contact">Statistic</a>
