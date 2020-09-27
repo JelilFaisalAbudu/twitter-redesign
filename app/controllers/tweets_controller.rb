@@ -6,7 +6,9 @@ class TweetsController < ApplicationController
   # GET /tweets.json
   def index
     @tweets = Tweet.all
+    @feed = current_user.feed.order(created_at: :desc)
     @tweet = current_user.tweets.build
+    @who_to_follow = current_user.not_following
   end
 
   # GET /tweets/1

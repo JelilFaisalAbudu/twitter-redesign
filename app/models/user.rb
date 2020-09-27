@@ -10,4 +10,14 @@ class User < ApplicationRecord
 
 	has_many :following, through: :active_relationships, source: :Followed
 	has_many :followers, through: :passive_relationships, source: :Follower
+
+	scope :order_by_most_recent, -> { order(created_at: :desc) }
+
+  def not_following
+    User.order_by_most_recent.reject { |user| self.following.include?(user) || user == self }
+	end
+	
+	def feed
+    Tweet.where(Author: (following + [self])).includes(:Author)
+  end
 end
