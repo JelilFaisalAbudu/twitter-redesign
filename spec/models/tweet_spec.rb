@@ -27,8 +27,8 @@ RSpec.describe Tweet, type: :model do
   
   context 'ActiveRecord associations' do
     it 'belongs to author' do
-      user = Tweet.reflect_on_association(:Author)
-      expect(user.macro).to eq(:belongs_to)
+      tweet = Tweet.reflect_on_association(:Author)
+      expect(tweet.macro).to eq(:belongs_to)
     end
   end
   
