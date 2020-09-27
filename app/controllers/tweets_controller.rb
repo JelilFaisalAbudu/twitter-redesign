@@ -76,7 +76,8 @@ class TweetsController < ApplicationController
   end
 
   def authorize_user
-    return unless !logged_in?
+    return if logged_in?
+
     flash[:alert] = 'You must sign in first'
     redirect_to sign_in_path
   end

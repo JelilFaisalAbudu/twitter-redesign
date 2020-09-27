@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-	include SessionsHelper
+  include SessionsHelper
 
   def require_user
     return if logged_in?
