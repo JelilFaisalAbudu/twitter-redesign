@@ -10,9 +10,9 @@
 		<img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid rounded mr-3">
 		<div class="tag">
 			<span class="name d-block">
-				<%= link_to follower.FullName, user_path(follower), class: 'is-link' %>
+				<%= link_to follower.FullName, user_path(follower), class: 'is-link name' %>
 			</span>
-			<span class="handle d-block">
+			<span class="handle d-block text-muted">
 				<%= "@#{follower.Username}" %>
 			</span>
 		</div>

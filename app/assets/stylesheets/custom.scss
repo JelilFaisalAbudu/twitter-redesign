@@ -3,7 +3,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .is-link:hover {
@@ -131,6 +131,11 @@ a {
   background-color: #54abee;
 }
 
+.top-navbar .fa,
+.top-navbar .fas {
+  font-size: 1.4em;
+}
+
 .card {
   border: none;
   background-color: #fff;
@@ -149,6 +154,10 @@ a {
   font-size: 1.6rem;
   padding: 0.5em 0;
   text-transform: uppercase;
+}
+
+.center-content .header:hover {
+  color: #54abee;
 }
 
 .who-to-follow {
