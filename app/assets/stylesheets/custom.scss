@@ -2,6 +2,14 @@ body {
   background-color: #f5f6f8 !important;
 }
 
+a {
+  text-decoration: none;
+}
+
+.is-link:hover {
+  color: #a2a3a5;
+}
+
 .side-nav {
   color: #5c7186;
   height: 100%;
@@ -37,6 +45,10 @@ body {
   }
 }
 
+.name {
+  text-transform: uppercase;
+}
+
 .side-nav .profile .name {
   color: #66788c;
 }
@@ -57,6 +69,10 @@ body {
   border-top: 0.21em solid #172830;
 }
 
+.item-group {
+  border-right: 0.11em solid rgba(0, 0, 0, 0.125);
+}
+
 .side-nav .item-group {
   border-right: 0.21em solid #172830;
 }
@@ -74,10 +90,6 @@ body {
 .followings .item-label {
   text-transform: capitalize;
   margin: 0;
-}
-
-.item-group {
-  border-right: 0.11em solid rgba(0, 0, 0, 0.125);
 }
 
 .item-group:last-child {
@@ -204,7 +216,8 @@ body {
   justify-content: center;
   align-items: flex-start;
 
-  .name {
+  .name,
+  .name > a {
     color: #132235;
     text-transform: uppercase;
   }

@@ -8,16 +8,21 @@
 		</div>
 		<div class="followings">
 			<div class="item-group following">
-				<p class="item">1000</p>
+				<p class="item">
+					<%= current_user.following.count %>
+				</p>
 				<p class="item-label">Following</p>
 			</div>
 			<div class="item-group followers">
-				<p class="item">1000</p>
+				<p class="item">
+					<%= current_user.followers.count %>
+				</p>
 				<p class="item-label">Followers</p>
 			</div>
 		</div>
 	</div>
 
+	<%= link_to "Home", root_path, class: 'side-nav-item' %>	
 	<%= link_to "Profile", user_path(current_user), class: 'side-nav-item' %>
 	<a class="side-nav-item" href="#services">Disciover</a>
 	<a class="side-nav-item" href="#clients">Connect</a>

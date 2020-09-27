@@ -1,49 +1,66 @@
 <div class="social-profile">
-<div class="bio">
-	<div class="item-group pic-group">
-		<span class="item item-icon">
-			<%= display_follow_button_for(@user) %>
-			<%= display_unfollow_button_for(@user) %>
-		</span>
-		<img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid">
-		<span class="item item-icon">
-			<i class="fas fa-list"></i>
-		</span>
-	</div>
-	<div class="tag">
-		<span class="name">Name</span>
-		<p class="handle">@handle</p>
-	</div>
-</div>	
-<div class="statistic">
-	<div class="item-group tweets">
-		<p class="item">1000</p>
-		<p class="item-label">Tweets</p>
-	</div>
-	<div class="item-group following">
-		<p class="item">1000</p>
-		<p class="item-label">Following</p>
-	</div>
-	<div class="item-group followers">
-		<p class="item">1000</p>
-		<p class="item-label">Followers</p>
-	</div>
-</div>
-<div class="followers">
-	<div class="main-headers">
-		<h4 class="header">Followed By</h4>
-	</div>
-	<div class="followed-by">
-		<div class="bio">
+	<div class="bio">
+		<div class="item-group pic-group">
+			<span class="item item-icon">
+				<%= display_follow_button_for(@user) %>
+				<%= display_unfollow_button_for(@user) %>
+			</span>
 			<img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid">
-			<div class="tag">
-				<span class="name">Name</span>
-				<span class="handle">@handle</span>
-			</div>
+			<span class="item item-icon " data-toggle="tooltip" title="">
+				<i class="fas fa-list"></i>
+			</span>
 		</div>
-		<span class="icon">
-			<i class="fas fa-plus"></i>
-		</span>
+		<div class="tag">
+			<span class="name">
+				<%= @user.FullName %>
+			</span>
+			<p class="handle">
+				<%= "@#{@user.Username}" %>
+			</p>
+		</div>
 	</div>
-</div>
+	<div class="statistic">
+		<div class="item-group tweets">
+			<p class="item">
+				<%= @user.tweets.count %>
+			</p>
+			<p class="item-label">Tweets</p>
+		</div>
+		<div class="item-group following">
+			<p class="item">
+			<%= @user.following.count %>
+			</p>
+			<p class="item-label">Following</p>
+		</div>
+		<div class="item-group followers">
+			<p class="item">
+			<%= @user.followers.count%>
+			</p>
+			<p class="item-label">Followers</p>
+		</div>
+	</div>
+	<div class="followers">
+		<div class="main-headers">
+			<h4 class="header">Followed By</h4>
+		</div>
+		<% @user.followers.each do |follower| %>
+		<div class="followed-by">
+			<div class="bio">
+				<img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid">
+				<div class="tag">
+					<span class="name">
+						<%= link_to follower.FullName, user_path(follower), class: 'is-link' %>
+					</span>
+					<span class="handle">
+						<%= "@#{follower.Username}" %>
+					</span>
+				</div>
+			</div>
+			<span class="icon">
+				<%= display_follow_button_for(@user) %>
+				<%= display_unfollow_button_for(@user) %>
+			</span>
+		</div>
+		<% end %>
+	</div>
 </div>

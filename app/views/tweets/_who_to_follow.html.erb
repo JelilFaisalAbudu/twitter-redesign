@@ -4,3 +4,18 @@
 		<i class="fa fa-refresh" aria-hidden="true"></i>
 	</span>
 </section>
+<div class="to-follow my-4">
+	<% @who_to_follow.each do |follower| %>
+	<div class="bio d-flex my-3">
+		<img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid rounded mr-3">
+		<div class="tag">
+			<span class="name d-block">
+				<%= link_to follower.FullName, user_path(follower), class: 'is-link' %>
+			</span>
+			<span class="handle d-block">
+				<%= "@#{follower.Username}" %>
+			</span>
+		</div>
+	</div>
+<% end %>
+</div>
