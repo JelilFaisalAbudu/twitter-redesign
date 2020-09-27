@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :request do
+RSpec.feature 'Users', type: :feature do
   describe 'GET /new' do
     it 'returns http success' do
       get '/users/new'

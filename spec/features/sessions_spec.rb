@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Sessions', type: :request do
+RSpec.describe 'Sessions', type: :feature do
   describe 'GET /new' do
     it 'returns http success' do
       get '/sessions/new'
