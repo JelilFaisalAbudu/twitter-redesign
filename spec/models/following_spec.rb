@@ -33,10 +33,5 @@ RSpec.describe Following, type: :model do
     it 'should invalidate the Followed_id of value nil' do
       expect(following).to_not be_valid
     end
-
-    it 'should validate the presence of the values for Follower_id and Followed_id' do
-      following = user_one.active_relationships.create(Followed_id: user_two.id)
-      expect(following).to be_valid
-    end
   end
 end
