@@ -1,6 +1,6 @@
 <div class="sign-up col-5 m-auto">
 	<h2 class="header my-3 text-center">Sign in</h2>
-	<%= form_with(scope: :session, url: sign_in_path, local: true, class: 'form-sign-in') do |form| %>
+	<%= form_with(scope: :session, url: sign_in_path, local: true, class: 'form-sign-in', id: 'sign-in-form') do |form| %>
 		<!-- render 'layouts/error_messages', f: f.object -->
 		<div class="form-group">
 			<%= form.label :Username %>
