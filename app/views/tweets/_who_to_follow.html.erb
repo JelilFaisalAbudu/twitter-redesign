@@ -5,15 +5,15 @@
 	</span>
 </section>
 <div class="to-follow my-4">
-	<% @who_to_follow.each do |follower| %>
+	<% @who_to_follow.each do | user | %>
 	<div class="bio d-flex my-3">
 		<img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid rounded mr-3">
 		<div class="tag">
 			<span class="name d-block">
-				<%= link_to follower.FullName, user_path(follower), class: 'is-link name' %>
+				<%= link_to user.FullName, user_path(user), class: 'is-link name' %>
 			</span>
 			<span class="handle d-block text-muted">
-				<%= "@#{follower.Username}" %>
+				<%= "@#{user.Username}" %>
 			</span>
 		</div>
 	</div>
