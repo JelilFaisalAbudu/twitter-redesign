@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'Sessions', type: :feature do
   let(:user) { FactoryBot.create(:user) }
-  context "visit the webpage" do
+  context 'visit the webpage' do
     scenario 'should display the login page' do
       visit 'tweets/index'
       expect(page).to  have_content('Sign in')
@@ -12,7 +12,7 @@ RSpec.feature 'Sessions', type: :feature do
       visit sign_in_path
 
       within('form') do
-        fill_in "username",	with: "InvalidUserName" 
+        fill_in 'username',	with: 'InvalidUserName'
       end
       click_button 'Submit'
       expect(page).to  have_content('Invalid username. Try again')
@@ -22,10 +22,10 @@ RSpec.feature 'Sessions', type: :feature do
       visit sign_in_path
 
       within('form') do
-        fill_in "username",	with: user.Username 
+        fill_in 'username',	with: user.Username
       end
       click_button 'Submit'
-      expect(page).to  have_content('Start a new tweet')
+      expect(page).to have_content('Start a new tweet')
     end
   end
 end

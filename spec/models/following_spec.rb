@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Following, type: :model do
-
   context 'ActiveRecord associations' do
     it 'belongs to follower' do
       user = Following.reflect_on_association(:Follower)
@@ -15,18 +14,15 @@ RSpec.describe Following, type: :model do
   end
 
   context 'Attributes Validation' do
-      
-      user_one = User.create(Username: 'JaneDoe',
-        FullName: 'Jane Doe',
-        Photo: 'photo.jpg',
-        CoverImage: 'image.jpg'
-      )
-  
-      user_two = User.create(Username: 'JohnDoe',
-        FullName: 'John Doe',
-        Photo: 'photo.jpg',
-        CoverImage: 'image.jpg'
-      )
+    user_one = User.create(Username: 'JaneDoe',
+                           FullName: 'Jane Doe',
+                           Photo: 'photo.jpg',
+                           CoverImage: 'image.jpg')
+
+    user_two = User.create(Username: 'JohnDoe',
+                           FullName: 'John Doe',
+                           Photo: 'photo.jpg',
+                           CoverImage: 'image.jpg')
 
     following = user_one.active_relationships.build(Followed_id: nil)
 

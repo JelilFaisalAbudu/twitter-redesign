@@ -1,8 +1,7 @@
 class User < ApplicationRecord
   validates :Username, presence: true, uniqueness: true
   validates :FullName, presence: true
-  
-  
+
   has_many :tweets, foreign_key: :Author_id
 
   has_many :active_relationships, class_name: 'Following',
