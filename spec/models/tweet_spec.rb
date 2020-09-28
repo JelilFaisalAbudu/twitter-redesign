@@ -1,12 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Tweet, type: :model do
+
+  let(:user) { FactoryBot.create(:user) }
+
   context "Every properly written tweet" do
-    user = User.create(Username: 'JohnDoe',
-      FullName: 'John Doe',
-      Photo: 'photo.jpg',
-      CoverImage: 'image.jpg'
-    )
     it "has the presence of text" do
       tweet = user.tweets.build(Text: 'Lorem ipsum')
       expect(tweet).to  be_valid
@@ -14,11 +12,7 @@ RSpec.describe Tweet, type: :model do
   end
 
   context "Every properly written tweet" do
-    user = User.create(Username: 'JohnDoe',
-      FullName: 'John Doe',
-      Photo: 'photo.jpg',
-      CoverImage: 'image.jpg'
-    )
+    
     it "has the presence of text" do
       tweet = user.tweets.build(Text: nil)
       expect(tweet).not_to  be_valid
