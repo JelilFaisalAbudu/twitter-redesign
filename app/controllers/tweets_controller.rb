@@ -27,16 +27,15 @@ class TweetsController < ApplicationController
   # POST /tweets.json
   def create
     @tweet = current_user.tweets.build(tweet_params)
-
-    respond_to do |format|
-      if @tweet.save
-        format.html { redirect_to root_path, notice: 'Tweet was successfully created.' }
-        format.json { render :show, status: :created, location: @tweet }
-      else
-        format.html { render :new }
-        format.json { render json: @tweet.errors, status: :unprocessable_entity }
-      end
+    
+    if @tweet.save
+      flash[:notice] = 'Your tweet was successfully posted.'
+      redirect_to root_path
+    else
+      flash.now[:alert] = 'Error. Tweet cannot be empty. You can only tweet with ten or more characters.' 
+      render :new
     end
+   
   end
 
   # PATCH/PUT /tweets/1
