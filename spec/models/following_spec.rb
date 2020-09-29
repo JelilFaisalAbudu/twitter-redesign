@@ -18,7 +18,7 @@ RSpec.describe Following, type: :model do
                            FullName: 'Jane Doe',
                            Photo: 'photo.jpg',
                            CoverImage: 'image.jpg')
-                           
+
     following = user_one.active_relationships.build(Followed_id: nil)
 
     it 'should invalidate the Followed_id of value nil' do
