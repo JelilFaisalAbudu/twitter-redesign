@@ -1,5 +1,6 @@
 module FollowingsHelper
-  # rubocop disable: Layout/LineLength
+  # rubocop:disable Layout/LineLength
+
   def display_follow_button_for(user)
     return unless user != current_user && !following?(user)
 
@@ -18,5 +19,5 @@ module FollowingsHelper
     current_user.following.include?(user)
   end
 
-  # rubocop enable: Layout/LineLength
+  # rubocop:enable Layout/LineLength
 end
