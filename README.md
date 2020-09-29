@@ -3,7 +3,7 @@
 
 > I built this project as an assignment(capstone project) at the  end of Ruby on Rails module of the  Microverse Main Curriculum
 
-![screenshot](app/assets/images/twiiter-redesign.png)
+![screenshot](app/assets/images/twitter-redesign.png)
 
 ## Built With
 
@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-* [Live Demo Link]('https://jelil-twitter-redesign.herokuapp.com/')
+* [Live Demo Link](https://jelil-twitter-redesign.herokuapp.com/)
 
 ## Getting Started
 
@@ -109,10 +109,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-* [Gregoire Vella]('https://www.behance.net/gregoirevella') for the project's design
+* [Gregoire Vella](https://www.behance.net/gregoirevella) for the project's design
 
-* [Font Awesome]('https://fontawesome.com/') for providing free icons
+* [Font Awesome](https://fontawesome.com/) for providing free icons
 
-* [Pixabay]('https://pixabay.com/') for photos
+* [Pixabay](https://pixabay.com/) for photos
 
 * My Stand-up Team Memmbers. You guys are really awesome
