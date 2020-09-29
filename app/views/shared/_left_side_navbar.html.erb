@@ -1,6 +1,6 @@
 	<div class="profile">
 		<div class="basic-details">
-			<img alt=" profile-pic" src="https://picsum.photos/id/1/70/70">
+			<%= avatar_for(current_user) %>
 			<div class="tag">
 				<span class="name"><%= current_user.FullName %></span>
 				<p class="handle"><%= "@#{current_user.Username}" %></p>
