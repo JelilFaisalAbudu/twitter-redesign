@@ -6,8 +6,8 @@
 </section>
 <div class="to-follow my-4">
 	<% @who_to_follow.each do | user | %>
-	<div class="bio d-flex my-3">
-		<img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid rounded mr-3">
+	<div class="bio d-flex align-items-center my-3">
+		<%= avatar_for(user) %>
 		<div class="tag">
 			<span class="name d-block">
 				<%= link_to user.FullName, user_path(user), class: 'is-link name' %>

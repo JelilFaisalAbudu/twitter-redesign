@@ -1,11 +1,12 @@
 <div class="social-profile">
-	<div class="bio">
+	<div class="bio bio-up-section">
 		<div class="item-group pic-group">
 			<span class="item item-icon">
 				<%= display_follow_button_for(@user) %>
 				<%= display_unfollow_button_for(@user) %>
 			</span>
-			<img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid">
+			<!--img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid"-->
+			<%= avatar_for(@user) %>
 			<span class="item item-icon " data-toggle="tooltip" title="">
 				<i class="fas fa-list"></i>
 			</span>
@@ -46,7 +47,7 @@
 		<% @user.followers.each do |follower| %>
 		<div class="followed-by">
 			<div class="bio">
-				<img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid">
+				<%= avatar_for(follower) %>
 				<div class="tag">
 					<span class="name">
 						<%= link_to follower.FullName, user_path(follower), class: 'is-link' %>
