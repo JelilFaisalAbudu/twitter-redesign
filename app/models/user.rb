@@ -26,5 +26,4 @@ class User < ApplicationRecord
   def feed
     Tweet.where(Author: (following + [self])).includes(:Author)
   end
-
 end
