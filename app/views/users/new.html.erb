@@ -11,7 +11,15 @@
 			<%= form.text_field :FullName, id: 'fullName', class: 'form-control' %>
 		</div>
 		<div class="form-group">
-			<%= form.submit 'Submit', class: 'form-control btn btn-primary mt-1' %>
+			<%= form.label :photo, 'Profile Photo' %><br>
+			<%= form.file_field :photo, id: 'photo', class: 'form-contro' %>
 		</div>
+		<div class="form-group">
+			<%= form.label :cover_image, 'Cover Image' %><br>
+			<%= form.file_field :cover_image, id: 'coverImage', class: 'form-contro' %>
+		</div>
+		<div class="form-group">
+      <%= form.submit 'Submit', class: 'btn btn-primary my-2' %>
+    </div>
 	<% end %>
 </div>
