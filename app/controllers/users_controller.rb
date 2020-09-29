@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = 'You have successfully registered'
+      log_in(@user)
       redirect_to root_path
     else
       flash.now[:alert] = 'Something went wrong'
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:Username, :FullName, :Photo, :CoverImage)
+    params.require(:user).permit(:Username, :FullName, :photo, :cover_image)
   end
 
   def set_user

@@ -2,6 +2,9 @@ class User < ApplicationRecord
   validates :Username, presence: true, uniqueness: true
   validates :FullName, presence: true
 
+  has_one_attached :photo
+  has_one_attached :cover_image
+
   has_many :tweets, foreign_key: :Author_id
 
   has_many :active_relationships, class_name: 'Following',
@@ -23,4 +26,5 @@ class User < ApplicationRecord
   def feed
     Tweet.where(Author: (following + [self])).includes(:Author)
   end
+
 end
