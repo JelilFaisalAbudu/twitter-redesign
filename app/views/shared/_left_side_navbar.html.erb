@@ -21,9 +21,26 @@
 			</div>
 		</div>
 	</div>
-
-	<%= link_to "Home", root_path, class: 'side-nav-item' %>	
-	<%= link_to "Profile", user_path(current_user), class: 'side-nav-item' %>
-	<a class="side-nav-item" href="#services">Disciover</a>
-	<a class="side-nav-item" href="#clients">Connect</a>
-	<a class="side-nav-item" href="#contact">Statistic</a>
+	<div class="side-nav-item-wrapper d-flex align-items-center">
+		<i class="icon fas fa-home mr-"></i>
+		<%= link_to "Home", root_path, class: 'side-nav-item' %>
+	</div>
+	<div class="side-nav-item-wrapper d-flex align-items-center">
+		<i class="icon fas fa-user-circle"></i>
+		<%= link_to "Profile", user_path(current_user), class: 'side-nav-item' %>
+	</div>
+	<div class="side-nav-item-wrapper d-flex align-items-center">
+		<i class="icon fab fa-cc-discover"></i>
+		<%= link_to "Discover", root_path, class: 'side-nav-item' %>
+	</div>
+	<div class="side-nav-item-wrapper d-flex align-items-center">
+		<i class="icon fab fa-connectdevelop"></i>
+		<%= link_to "Connect", root_path, class: 'side-nav-item' %>
+	</div>
+	<div class="side-nav-item-wrapper d-flex align-items-center">
+		<i class="icon fas fa-info-circle"></i>
+		<%= link_to "Statistics", root_path, class: 'side-nav-item' %>
+	</div>
+	
+	
+	
