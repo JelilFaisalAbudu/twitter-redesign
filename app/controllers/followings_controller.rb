@@ -8,7 +8,7 @@ class FollowingsController < ApplicationController
       redirect_to user_path(@user)
     else
       flash[:alert] = 'Something went wrong. Try again.'
-      redirect_to user_path(@user)
+      redirect_to root_path
     end
   end
 
@@ -19,7 +19,7 @@ class FollowingsController < ApplicationController
       redirect_to user_path(@user)
     else
       flash[:alert] = 'Something went wrong. Try again'
-      redirect_to user_path(@user)
+      redirect_to root_path
     end
   end
 

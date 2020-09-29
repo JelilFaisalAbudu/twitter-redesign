@@ -18,7 +18,7 @@ RSpec.feature 'Users', type: :feature do
     visit sign_in_path
 
     within('form') do
-      fill_in 'username',	with: jane.Username
+      fill_in 'username', with: jane.Username
     end
     click_button 'Submit'
   end
@@ -33,7 +33,7 @@ RSpec.feature 'Users', type: :feature do
 
   scenario 'as new newly registered can follow other users' do
     jane.active_relationships.create(Followed_id: john.id)
-    expect(jane.following.count).to  eq(1)
-    expect(john.followers.count).to  eq(1)
+    expect(jane.following.count).to eq(1)
+    expect(john.followers.count).to eq(1)
   end
 end
