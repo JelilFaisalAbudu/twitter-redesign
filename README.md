@@ -3,7 +3,7 @@
 
 > I built this project as an assignment(capstone project) at the  end of Ruby on Rails module of the  Microverse Main Curriculum
 
-![screenshot](app/assets/images/twitter-redesign.png)
+![screenshot](app/assets/images/TwitterRedesign.png)
 
 ## Built With
 
