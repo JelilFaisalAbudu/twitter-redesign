@@ -19,6 +19,8 @@
 
 * [Live Demo Link](https://jelil-twitter-redesign.herokuapp.com/)
 
+* [Video Presentation](https://www.loom.com/share/be2244932d864b92b2b5c0186054b224)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
