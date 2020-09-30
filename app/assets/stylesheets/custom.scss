@@ -201,12 +201,15 @@ a {
 .who-to-follow {
   background-color: #f5f6f8;
   border-left: 1px solid rgba(0, 0, 0, 0.125);
+  position: sticky;
+  height: 100vh;
+  top: 0;
+}
 
-  .main-headers {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.who-to-follow .main-headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .new-tweet-header {
