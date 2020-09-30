@@ -12,9 +12,8 @@ a {
 
 .side-nav {
   color: #5c7186;
-  height: 100%;
-  width: 15%;
-  position: fixed;
+  height: 100vh;
+  position: sticky;
   z-index: 1;
   top: 0;
   left: 0;
@@ -181,7 +180,7 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   color: #a2a3a5;
   font-size: 1.6rem;
-  padding: 0.5em 0;
+  padding: 0.6em;
   text-transform: uppercase;
 }
 
@@ -264,8 +263,12 @@ article .profile-pic {
   border-radius: 50%;
 }
 
-.social-profile .handle {
+.social-profile .handle,
+.social-profile .item-label {
   color: #babbbd;
+}
+
+.social-profile .handle {
   margin: 0;
 }
 
