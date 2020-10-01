@@ -14,10 +14,11 @@ RSpec.describe Following, type: :model do
   end
 
   context 'Attributes Validation' do
-    user_one = User.create(Username: 'JaneDoe',
-                           FullName: 'Jane Doe',
-                           Photo: 'photo.jpg',
-                           CoverImage: 'image.jpg')
+    user_one = User.create(username: 'JaneDoe',
+                           full_name: 'Jane Doe',
+                          #  photo: 'photo.jpg',
+                          #  cover_image: 'image.jpg'
+    )
 
     following = user_one.active_relationships.build(Followed_id: nil)
 

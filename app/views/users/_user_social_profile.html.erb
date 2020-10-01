@@ -13,10 +13,10 @@
 		</div>
 		<div class="tag">
 			<span class="name">
-				<%= @user.FullName %>
+				<%= @user.full_name %>
 			</span>
 			<p class="handle">
-				<%= "@#{@user.Username}" %>
+				<%= "@#{@user.username}" %>
 			</p>
 		</div>
 	</div>
@@ -50,10 +50,10 @@
 				<%= avatar_for(follower) %>
 				<div class="tag">
 					<span class="name">
-						<%= link_to follower.FullName, user_path(follower), class: 'is-link text-primary' %>
+						<%= link_to follower.full_name, user_path(follower), class: 'is-link text-primary' %>
 					</span>
 					<span class="handle">
-						<%= "@#{follower.Username}" %>
+						<%= "@#{follower.username}" %>
 					</span>
 				</div>
 			</div>

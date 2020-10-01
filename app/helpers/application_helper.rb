@@ -22,18 +22,18 @@ module ApplicationHelper
   def avatar_for(user)
     avatar = user.photo
     if avatar.attached?
-      image_tag(avatar, alt: "@#{user.Username}", class: 'profile-pic')
+      image_tag(avatar, alt: "@#{user.username}", class: 'profile-pic')
     else
-      image_tag('default_avatar.png', alt: "@#{user.Username}", class: 'profile-pic')
+      image_tag('default_avatar.png', alt: "@#{user.username}", class: 'profile-pic')
     end
   end
 
   def cover_image_for(user)
     cover_image = user.cover_image
     if cover_image.attached?
-      image_tag(cover_image, alt: "@#{user.Username} ", width: 1046, height: 302)
+      image_tag(cover_image, alt: "@#{user.username} ", width: "100%", height: 302)
     else
-      image_tag('default_cover.jpg', alt: "@#{user.Username}", width: 1046, height: 300)
+      image_tag('default_cover.jpg', alt: "@#{user.username}", width: 1046, height: 300)
     end
   end
 

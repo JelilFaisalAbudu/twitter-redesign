@@ -14,7 +14,7 @@
 		<i class="fa fa-cog icon" aria-hidden="true"></i>
 	</a>
 	<div class="dropdown-menu dropdown-menu-right">
-		<%= link_to current_user.Username, user_path(current_user), class: 'dropdown-item' %>
+		<%= link_to current_user.username, user_path(current_user), class: 'dropdown-item' %>
 		<div class="dropdown-divider"></div>
 		<%= link_to "Sign out", sign_out_path, method: :delete, class: 'dropdown-item' %>
 	</div>

@@ -22,7 +22,7 @@ RSpec.feature 'Sessions', type: :feature do
       visit sign_in_path
 
       within('form') do
-        fill_in 'username', with: user.Username
+        fill_in 'username', with: user.username
       end
       click_button 'Submit'
       expect(page).to have_content('Start a new tweet')

@@ -2,8 +2,8 @@
 		<div class="basic-details d-flex">
 			<%= avatar_for(current_user) %>
 			<div class="tag">
-				<span class="name"><%= current_user.FullName %></span>
-				<p class="handle"><%= "@#{current_user.Username}" %></p>
+				<span class="name"><%= current_user.full_name %></span>
+				<p class="handle"><%= "@#{current_user.username}" %></p>
 			</div>
 		</div>
 		<div class="followings">

@@ -10,10 +10,10 @@ RSpec.describe User, type: :model do
 
   context 'Every available user' do
     user = User.new(
-      Username: 'ExampleUser',
-      FullName: 'Example User',
-      Photo: 'photo.jpg',
-      CoverImage: 'image.jpg'
+      username: 'ExampleUser',
+      full_name: 'Example User',
+      # photo: 'photo.jpg',
+      # cover_image: 'image.jpg'
     )
 
     it 'has both username full name' do
@@ -21,7 +21,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'has both username full name' do
-      user.Username = nil
+      user.username = nil
       expect(user).not_to be_valid
     end
   end

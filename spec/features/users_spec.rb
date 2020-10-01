@@ -7,10 +7,10 @@ RSpec.feature 'Users', type: :feature do
 
   let(:john) do
     User.create(
-      Username: 'JohnDoe',
-      FullName: 'John Doe',
-      Photo: 'photo.jpg',
-      CoverImage: 'coverImage.jpg'
+      username: 'JohnDoe',
+      full_name: 'John Doe',
+      # photo: 'photo.jpg',
+      # cover_image: 'coverImage.jpg'
     )
   end
 
@@ -18,7 +18,7 @@ RSpec.feature 'Users', type: :feature do
     visit sign_in_path
 
     within('form') do
-      fill_in 'username', with: jane.Username
+      fill_in 'username', with: jane.username
     end
     click_button 'Submit'
   end

@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    user = User.find_by(Username: params[:session][:Username])
+    user = User.find_by(username: params[:session][:username])
     if user
       # log the user in and direct to show page
       log_in(user)

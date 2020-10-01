@@ -3,8 +3,8 @@
 	<%= form_with(scope: :session, url: sign_in_path, local: true, class: 'form-sign-in', id: 'sign-in-form') do |form| %>
 		<!-- render 'layouts/error_messages', f: f.object -->
 		<div class="form-group">
-			<%= form.label :Username %>
-			<%= form.text_field :Username, id: 'username', class: 'form-control' %>
+			<%= form.label :username %>
+			<%= form.text_field :username, id: 'username', class: 'form-control' %>
 		</div>
 		<div class="form-group">
 			<%= form.submit 'Submit', class: 'form-control btn btn-primary mt-1' %>

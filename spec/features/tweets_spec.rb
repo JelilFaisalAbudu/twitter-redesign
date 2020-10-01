@@ -9,7 +9,7 @@ RSpec.feature 'Tweets', type: :feature do
   scenario 'cannot be posted  with empty text' do
     visit sign_in_path
     within('#sign-in-form') do
-      fill_in 'username', with: user.Username
+      fill_in 'username', with: user.username
     end
     click_button 'Submit'
     expect(page).to have_content('Start a new tweet')
@@ -24,7 +24,7 @@ RSpec.feature 'Tweets', type: :feature do
   scenario 'cannot be posted  with empty text' do
     visit sign_in_path
     within('#sign-in-form') do
-      fill_in 'username', with: user.Username
+      fill_in 'username', with: user.username
     end
     click_button 'Submit'
     expect(page).to have_content('Start a new tweet')
