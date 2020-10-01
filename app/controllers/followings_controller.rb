@@ -2,7 +2,7 @@ class FollowingsController < ApplicationController
   before_action :set_user
 
   def create
-    @following = current_user.active_relationships.build(Followed_id: @user.id)
+    @following = current_user.active_relationships.build(followed_id: @user.id)
     if @following.save
       flash[:notice] = 'You are now following this user'
       redirect_to user_path(@user)
@@ -13,7 +13,7 @@ class FollowingsController < ApplicationController
   end
 
   def destroy
-    @following = Following.find_by_Follower_id_and_Followed_id(current_user, @user)
+    @following = Following.find_by_follower_id_and_followed_id(current_user, @user)
     if @following.destroy
       flash[:notice] = 'You no more follow this user.'
       redirect_to user_path(@user)
@@ -26,6 +26,6 @@ class FollowingsController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:Followed_id])
+    @user = User.find(params[:followed_id])
   end
 end

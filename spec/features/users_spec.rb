@@ -32,7 +32,7 @@ RSpec.feature 'Users', type: :feature do
   end
 
   scenario 'as new newly registered can follow other users' do
-    jane.active_relationships.create(Followed_id: john.id)
+    jane.active_relationships.create(followed_id: john.id)
     expect(jane.following.count).to eq(1)
     expect(john.followers.count).to eq(1)
   end

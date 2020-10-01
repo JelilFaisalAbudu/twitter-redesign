@@ -8,14 +8,14 @@ class User < ApplicationRecord
   has_many :tweets, foreign_key: :author_id
 
   has_many :active_relationships, class_name: 'Following',
-                                  foreign_key: 'Follower_id',
+                                  foreign_key: 'follower_id',
                                   dependent: :destroy
   has_many :passive_relationships, class_name: 'Following',
-                                   foreign_key: 'Followed_id',
+                                   foreign_key: 'followed_id',
                                    dependent: :destroy
 
-  has_many :following, through: :active_relationships, source: :Followed
-  has_many :followers, through: :passive_relationships, source: :Follower
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
   scope :order_by_most_recent, -> { order(created_at: :desc) }
 
