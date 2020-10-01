@@ -5,21 +5,21 @@ RSpec.describe Tweet, type: :model do
 
   context 'Every properly written tweet' do
     it 'has the presence of text' do
-      tweet = user.tweets.build(Text: 'Lorem ipsum')
+      tweet = user.tweets.build(text: 'Lorem ipsum')
       expect(tweet).to be_valid
     end
   end
 
   context 'Every properly written tweet' do
     it 'has the presence of text' do
-      tweet = user.tweets.build(Text: nil)
+      tweet = user.tweets.build(text: nil)
       expect(tweet).not_to be_valid
     end
   end
 
   context 'ActiveRecord associations' do
     it 'belongs to author' do
-      tweet = Tweet.reflect_on_association(:Author)
+      tweet = Tweet.reflect_on_association(:author)
       expect(tweet.macro).to eq(:belongs_to)
     end
   end

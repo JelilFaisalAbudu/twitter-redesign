@@ -2,29 +2,22 @@ class TweetsController < ApplicationController
   before_action :authorize_user
   before_action :set_tweet, only: %i[show edit update destroy]
 
-  # GET /tweets
-  # GET /tweets.json
+
   def index
-    @tweets = Tweet.all.includes(:Author)
+    @tweets = Tweet.all.includes(:author)
     @feed = current_user.feed.order(created_at: :desc)
     @tweet = current_user.tweets.build
     @who_to_follow = current_user.not_following
   end
 
-  # GET /tweets/1
-  # GET /tweets/1.json
   def show; end
 
-  # GET /tweets/new
   def new
     @tweet = current_user.tweets.build
   end
 
-  # GET /tweets/1/edit
   def edit; end
 
-  # POST /tweets
-  # POST /tweets.json
   def create
     @tweet = current_user.tweets.build(tweet_params)
 
@@ -51,15 +44,6 @@ class TweetsController < ApplicationController
     end
   end
 
-  # DELETE /tweets/1
-  # DELETE /tweets/1.json
-  def destroy
-    @tweet.destroy
-    respond_to do |format|
-      format.html { redirect_to tweets_url, notice: 'Tweet was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
 
   private
 
@@ -70,7 +54,7 @@ class TweetsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def tweet_params
-    params.require(:tweet).permit(:Text)
+    params.require(:tweet).permit(:text)
   end
 
   def authorize_user

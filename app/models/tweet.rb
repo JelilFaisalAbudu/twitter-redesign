@@ -1,5 +1,5 @@
 class Tweet < ApplicationRecord
-  belongs_to :Author, class_name: 'User'
+  belongs_to :author, class_name: 'User'
 
-  validates :Text, presence: true, length: { maximum: 250, minimum: 5 }
+  validates :text, presence: true, length: { maximum: 250, minimum: 5 }
 end

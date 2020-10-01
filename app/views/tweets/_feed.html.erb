@@ -9,17 +9,17 @@
 				<div class=" col-12 mb-3">
 					<article class="my-2">
 						<div class="media d-flex">
-							<%= avatar_for(tweet.Author) %>
+							<%= avatar_for(tweet.author) %>
 							<div class="media-body flex-grow-1">
 								<div>
 									<div class="d-flex justify-content-between align-items-end">
 										<div class="tag">
 
 											<span class="name">
-												<%= tweet.Author.full_name %>
+												<%= tweet.author.full_name %>
 											</span>
 											<p class="handle text-muted">
-												<%= "@#{tweet.Author.username}" %>
+												<%= "@#{tweet.author.username}" %>
 											</p>
 										</div>
 										<small class="text-muted">
@@ -28,7 +28,7 @@
 									</div>
 								</div>
 								<p>
-									<%= tweet.Text %>
+									<%= tweet.text %>
 								</p>
 							</div>
 						</div>

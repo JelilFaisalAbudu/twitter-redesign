@@ -21,7 +21,7 @@ RSpec.feature 'Tweets', type: :feature do
     expect(page).to have_content('Error. Tweet cannot be empty. You can only tweet with ten or more characters.')
   end
 
-  scenario 'cannot be posted  with empty text' do
+  scenario 'can only be posted if it contains text' do
     visit sign_in_path
     within('#sign-in-form') do
       fill_in 'username', with: user.username

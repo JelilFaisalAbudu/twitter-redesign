@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_one_attached :photo
   has_one_attached :cover_image
 
-  has_many :tweets, foreign_key: :Author_id
+  has_many :tweets, foreign_key: :author_id
 
   has_many :active_relationships, class_name: 'Following',
                                   foreign_key: 'Follower_id',
@@ -24,6 +24,6 @@ class User < ApplicationRecord
   end
 
   def feed
-    Tweet.where(Author: (following + [self])).includes(:Author)
+    Tweet.where(author: (following + [self])).includes(:author)
   end
 end
