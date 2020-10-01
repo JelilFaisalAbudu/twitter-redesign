@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
   context 'Every available user' do
     user = User.new(
       username: 'ExampleUser',
-      full_name: 'Example User',
+      full_name: 'Example User'
       # photo: 'photo.jpg',
       # cover_image: 'image.jpg'
     )

@@ -10,60 +10,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_01_211234) do
-
+ActiveRecord::Schema.define(version: 20_201_001_211_234) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "active_storage_attachments", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "record_type", null: false
-    t.bigint "record_id", null: false
-    t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
-    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
-    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  create_table 'active_storage_attachments', force: :cascade do |t|
+    t.string 'name', null: false
+    t.string 'record_type', null: false
+    t.bigint 'record_id', null: false
+    t.bigint 'blob_id', null: false
+    t.datetime 'created_at', null: false
+    t.index ['blob_id'], name: 'index_active_storage_attachments_on_blob_id'
+    t.index %w[record_type record_id name blob_id], name: 'index_active_storage_attachments_uniqueness', unique: true
   end
 
-  create_table "active_storage_blobs", force: :cascade do |t|
-    t.string "key", null: false
-    t.string "filename", null: false
-    t.string "content_type"
-    t.text "metadata"
-    t.bigint "byte_size", null: false
-    t.string "checksum", null: false
-    t.datetime "created_at", null: false
-    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  create_table 'active_storage_blobs', force: :cascade do |t|
+    t.string 'key', null: false
+    t.string 'filename', null: false
+    t.string 'content_type'
+    t.text 'metadata'
+    t.bigint 'byte_size', null: false
+    t.string 'checksum', null: false
+    t.datetime 'created_at', null: false
+    t.index ['key'], name: 'index_active_storage_blobs_on_key', unique: true
   end
 
-  create_table "followings", force: :cascade do |t|
-    t.bigint "follower_id", null: false
-    t.bigint "followed_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["followed_id"], name: "index_followings_on_followed_id"
-    t.index ["follower_id"], name: "index_followings_on_follower_id"
+  create_table 'followings', force: :cascade do |t|
+    t.bigint 'follower_id', null: false
+    t.bigint 'followed_id', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['followed_id'], name: 'index_followings_on_followed_id'
+    t.index ['follower_id'], name: 'index_followings_on_follower_id'
   end
 
-  create_table "tweets", force: :cascade do |t|
-    t.text "text"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "author_id", null: false
-    t.index ["author_id"], name: "index_tweets_on_author_id"
+  create_table 'tweets', force: :cascade do |t|
+    t.text 'text'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.bigint 'author_id', null: false
+    t.index ['author_id'], name: 'index_tweets_on_author_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "full_name"
-    t.string "Photo"
-    t.string "CoverImage"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'username'
+    t.string 'full_name'
+    t.string 'Photo'
+    t.string 'CoverImage'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "followings", "users", column: "followed_id"
-  add_foreign_key "followings", "users", column: "follower_id"
-  add_foreign_key "tweets", "users", column: "author_id"
+  add_foreign_key 'active_storage_attachments', 'active_storage_blobs', column: 'blob_id'
+  add_foreign_key 'followings', 'users', column: 'followed_id'
+  add_foreign_key 'followings', 'users', column: 'follower_id'
+  add_foreign_key 'tweets', 'users', column: 'author_id'
 end

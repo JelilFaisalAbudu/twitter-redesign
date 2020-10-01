@@ -4,7 +4,7 @@ class RenameFieldsInTweets < ActiveRecord::Migration[6.0]
     rename_column :tweets, :Author_id, :author_id
   end
 
-  def def down
+  def def(_down)
     rename_column :tweets, :text, :Text
   end
 end

@@ -2,7 +2,6 @@ class TweetsController < ApplicationController
   before_action :authorize_user
   before_action :set_tweet, only: %i[show edit update destroy]
 
-
   def index
     @tweets = Tweet.all.includes(:author)
     @feed = current_user.feed.order(created_at: :desc)
@@ -43,7 +42,6 @@ class TweetsController < ApplicationController
       end
     end
   end
-
 
   private
 

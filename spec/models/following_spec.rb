@@ -15,10 +15,9 @@ RSpec.describe Following, type: :model do
 
   context 'Attributes Validation' do
     user_one = User.create(username: 'JaneDoe',
-                           full_name: 'Jane Doe',
-                          #  photo: 'photo.jpg',
-                          #  cover_image: 'image.jpg'
-    )
+                           full_name: 'Jane Doe')
+    #  photo: 'photo.jpg',
+    #  cover_image: 'image.jpg'
 
     following = user_one.active_relationships.build(followed_id: nil)
 

@@ -8,7 +8,7 @@ RSpec.feature 'Users', type: :feature do
   let(:john) do
     User.create(
       username: 'JohnDoe',
-      full_name: 'John Doe',
+      full_name: 'John Doe'
       # photo: 'photo.jpg',
       # cover_image: 'coverImage.jpg'
     )

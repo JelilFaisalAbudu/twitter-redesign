@@ -8,5 +8,4 @@ class RenameFieldsInUsers < ActiveRecord::Migration[6.0]
     rename_column :users, :username, :Username
     rename_column :users, :full_name, :FullName
   end
-
 end
