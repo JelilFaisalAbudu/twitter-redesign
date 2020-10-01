@@ -1,12 +1,5 @@
 module ApplicationHelper
-  # def session_check_for(current_user)
-  #   if current_user
-  #     render 'shared/user_info'
-
-  #   else
-  #     link_to 'Sign in', user_session_path
-  #   end
-  # end
+ 
   def display_side_nav
     render '/shared/left_side_navbar' if logged_in?
   end
@@ -37,12 +30,4 @@ module ApplicationHelper
     end
   end
 
-  # def cover_image(user)
-  #   if user.cover_image.attached?
-
-  #     url_for(user.cover_image)
-  #   else
-  #     url_for('default_cover.jpg')
-  #   end
-  # end
 end
