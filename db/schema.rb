@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_01_101259) do
+ActiveRecord::Schema.define(version: 2020_10_01_211234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,12 +37,12 @@ ActiveRecord::Schema.define(version: 2020_10_01_101259) do
   end
 
   create_table "followings", force: :cascade do |t|
-    t.bigint "Follower_id", null: false
-    t.bigint "Followed_id", null: false
+    t.bigint "follower_id", null: false
+    t.bigint "followed_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["Followed_id"], name: "index_followings_on_Followed_id"
-    t.index ["Follower_id"], name: "index_followings_on_Follower_id"
+    t.index ["followed_id"], name: "index_followings_on_followed_id"
+    t.index ["follower_id"], name: "index_followings_on_follower_id"
   end
 
   create_table "tweets", force: :cascade do |t|
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2020_10_01_101259) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "followings", "users", column: "Followed_id"
-  add_foreign_key "followings", "users", column: "Follower_id"
+  add_foreign_key "followings", "users", column: "followed_id"
+  add_foreign_key "followings", "users", column: "follower_id"
   add_foreign_key "tweets", "users", column: "author_id"
 end
