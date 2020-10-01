@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_01_082500) do
+ActiveRecord::Schema.define(version: 2020_10_01_101259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,11 +46,11 @@ ActiveRecord::Schema.define(version: 2020_10_01_082500) do
   end
 
   create_table "tweets", force: :cascade do |t|
-    t.text "Text"
+    t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "Author_id", null: false
-    t.index ["Author_id"], name: "index_tweets_on_Author_id"
+    t.bigint "author_id", null: false
+    t.index ["author_id"], name: "index_tweets_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,5 +65,5 @@ ActiveRecord::Schema.define(version: 2020_10_01_082500) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "followings", "users", column: "Followed_id"
   add_foreign_key "followings", "users", column: "Follower_id"
-  add_foreign_key "tweets", "users", column: "Author_id"
+  add_foreign_key "tweets", "users", column: "author_id"
 end
