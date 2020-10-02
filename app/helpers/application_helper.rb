@@ -1,5 +1,4 @@
 module ApplicationHelper
- 
   def display_side_nav
     render '/shared/left_side_navbar' if logged_in?
   end
@@ -32,6 +31,7 @@ module ApplicationHelper
 
   def no_following(user)
     return if user.following.count >= 1
+
     content_tag(:div, class: 'py-4 text-bold') do
       "#{user.username} is not following anyone yet"
     end
@@ -39,8 +39,18 @@ module ApplicationHelper
 
   def no_followers(user)
     return if user.followers.count >= 1
+
     content_tag(:div, class: 'py-4') do
       "#{user.username} has no followers yet"
     end
-  end  
+  end
+
+  def flash_class(level)
+    case level.to_sym
+    when :notice then 'alert alert-success'
+    when :success then 'alert alert-success'
+    when :error then 'alert alert-danger'
+    when :alert then 'alert alert-danger'
+    end
+  end
 end
