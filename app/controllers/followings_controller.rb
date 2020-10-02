@@ -4,7 +4,7 @@ class FollowingsController < ApplicationController
   def create
     @following = current_user.active_relationships.build(followed_id: @user.id)
     if @following.save
-      flash[:notice] = 'You are now following this user'
+      flash[:notice] = "You are now following  @#{@user.username}"
       redirect_to user_path(@user)
     else
       flash[:alert] = 'Something went wrong. Try again.'
@@ -15,7 +15,7 @@ class FollowingsController < ApplicationController
   def destroy
     @following = Following.find_by_follower_id_and_followed_id(current_user, @user)
     if @following.destroy
-      flash[:notice] = 'You no more follow this user.'
+      flash[:notice] = "You no more follow @#{@user.username}."
       redirect_to user_path(@user)
     else
       flash[:alert] = 'Something went wrong. Try again'
