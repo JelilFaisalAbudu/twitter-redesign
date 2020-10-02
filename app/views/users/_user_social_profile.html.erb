@@ -59,5 +59,28 @@
 			</div>
 		</div>
 		<% end %>
+		<%= no_followers(@user) %>
+	</div>
+
+	<div class="followers following pt-4">
+		<div class="main-headers">
+			<h4 class="header">Following</h4>
+		</div>
+		<% @user.following.each do |followed| %>
+		<div class="followed-by following">
+			<div class="bio">
+				<%= avatar_for(followed) %>
+				<div class="tag">
+					<span class="name">
+						<%= link_to followed.full_name, user_path(followed), class: 'is-link text-primary' %>
+					</span>
+					<span class="handle">
+						<%= "@#{followed.username}" %>
+					</span>
+				</div>
+			</div>
+		</div>
+		<% end %>
+		<%= no_following(@user)%>
 	</div>
 </div>
