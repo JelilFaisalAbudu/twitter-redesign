@@ -19,11 +19,24 @@
 
 * [Live Demo Link](https://jelil-twitter-redesign.herokuapp.com/)
 
-* [Video Presentation](https://www.loom.com/share/be2244932d864b92b2b5c0186054b224)
+* [Video Presentation](https://www.loom.com/share/07167b2b326f4a27b4631b356eb0a926)
 
-## Getting Started
+## How to get a copy
 
 To get a local copy up and running follow these simple example steps.
+
+* Locate and click on the dropdown button that contains the word "code"
+
+* Choose to either clone the this reposotory by clicking on the URL button
+OR,click on the Download Zip button to download it directly onto your machine.
+
+> With the cloning option, open your machine terminal and run this command to get a copy
+
+```bash
+git clone https://github.com/JelilFaisalAbudu/twitter-redesign.git
+```
+
+```cd``` into the directory to start working on your code
 
 ### Prerequisites
 
@@ -35,13 +48,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-#### Instal gems with:
+#### Instal gems with
 
 ```bash
 bundle install
 ```
 
-#### Setup database with:
+#### Setup database with
 
 ```bash
    rails db:create
@@ -50,7 +63,7 @@ bundle install
 
 ### Usage
 
-#### Start server with:
+#### Start server with
 
 ```bash
     rails server
