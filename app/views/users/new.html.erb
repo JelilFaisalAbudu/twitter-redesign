@@ -1,7 +1,11 @@
 <div class="sign-up col-5 m-auto">
 	<h2 class="header my-3 text-center">Sign up</h2>
 	<%= form_with model: @user, local:true, id: 'sign-up-form' do |form| %>
-
+	<ul>
+  	<% @user.errors.full_messages.each do |error| %>
+    <li class="alert alert-danger"><%= error %></li>
+  <% end %>
+  </ul>
 		<div class="form-group">
 			<%= form.label :username %>
 			<%= form.text_field :username, id: 'username', class: 'form-control' %>

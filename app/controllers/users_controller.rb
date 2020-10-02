@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       flash[:notice] = 'You have successfully registered'
       redirect_to root_path
     else
-      flash.now[:alert] = 'Something went wrong'
+      flash.now[:error]
       render 'new'
     end
   end

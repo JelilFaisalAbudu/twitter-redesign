@@ -1,10 +1,5 @@
-<%  if flash[:notice] %>
-  <p class="alert alert-success">
-    <%= notice %>
-  </p>
-<% end %>
-<% if flash[:alert] %>
-  <p class="alert alert-danger">
-    <%= alert %>
-  </p>
+<% flash.each do |key, value| %>
+  <div class="<%= flash_class(key) %>">
+    <%= value %>
+  </div>
 <% end %>
