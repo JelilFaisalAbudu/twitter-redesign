@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     if user
       # log the user in and direct to show page
       log_in(user)
+      flash[:notice] = 'Welcome back...'
       redirect_to root_path
     else
       flash.now[:alert] = 'Invalid username. Try again' # Log in not

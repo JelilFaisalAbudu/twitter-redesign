@@ -10,8 +10,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:notice] = 'You have successfully registered'
       log_in(@user)
+      flash[:notice] = 'You have successfully registered'
       redirect_to root_path
     else
       flash.now[:alert] = 'Something went wrong'
