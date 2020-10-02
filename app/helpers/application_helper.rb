@@ -30,4 +30,17 @@ module ApplicationHelper
     end
   end
 
+  def no_following(user)
+    return if user.following.count >= 1
+    content_tag(:div, class: 'py-4 text-bold') do
+      "#{user.username} is not following anyone yet"
+    end
+  end
+
+  def no_followers(user)
+    return if user.followers.count >= 1
+    content_tag(:div, class: 'py-4') do
+      "#{user.username} has no followers yet"
+    end
+  end  
 end
