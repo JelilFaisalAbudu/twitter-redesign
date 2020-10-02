@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_one_attached :photo
   has_one_attached :cover_image
 
-  has_many :tweets, foreign_key: :author_id
+  has_many :tweets, foreign_key: :author_id, dependent: :destroy
 
   has_many :active_relationships, class_name: 'Following',
                                   foreign_key: 'follower_id',
