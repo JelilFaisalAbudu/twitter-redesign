@@ -19,7 +19,7 @@
 
 * [Live Demo Link](https://jelil-twitter-redesign.herokuapp.com/)
 
-* [Video Presentation](https://www.loom.com/share/07167b2b326f4a27b4631b356eb0a926)
+* [Video Presentation](https://www.loom.com/share/cea006a349684d4baee89c3bd584067f)
 
 ## How to get a copy
 
