@@ -9,8 +9,6 @@ RSpec.feature 'Users', type: :feature do
     User.create(
       username: 'JohnDoe',
       full_name: 'John Doe'
-      # photo: 'photo.jpg',
-      # cover_image: 'coverImage.jpg'
     )
   end
 
