@@ -1,0 +1,74 @@
+.side-nav {
+  color: #5c7186;
+  height: 100vh;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #213246;
+  overflow-x: hidden;
+
+  * {
+    text-transform: uppercase;
+  }
+
+  .profile {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a2b3d;
+
+    .basic-details {
+      display: flex;
+      width: 100%;
+      padding: 1.6em 0 1.6em 1em;
+    }
+  }
+
+  img {
+    width: 60px;
+    border-radius: 7%;
+    margin-right: 0.5em;
+  }
+}
+
+.side-nav .profile .name {
+  color: #66788c;
+}
+
+.side-nav .followings {
+  border-top: 0.21em solid #172830;
+}
+
+.side-nav .side-nav-item-wrapper {
+  padding: 0.6em 0.6em 0.6em 1em;
+}
+
+.side-nav .item-group {
+  border-right: 0.21em solid #172830;
+}
+
+.side-nav .side-nav-item {
+  font-size: 1.3em;
+  text-decoration: none;
+  color: #5c7186;
+  display: inline-block;
+}
+
+.side-nav-item:focus {
+  background-color: #54abee;
+}
+
+.side-nav .side-nav-item-wrapper:hover {
+  color: #fffefc;
+  background-color: #54abee;
+
+  a {
+    color: inherit;
+  }
+}
+
+.side-nav-item-wrapper .icon {
+  font-size: 1.3em;
+  margin-right: 1em;
+}

@@ -1,0 +1,86 @@
+<div class="social-profile">
+	<div class="bio bio-up-section">
+		<div class="item-group pic-group">
+			<span class="item item-icon">
+				<%= display_follow_button_for(@user) %>
+				<%= display_unfollow_button_for(@user) %>
+			</span>
+			<!--img alt="profile-pic" src="https://picsum.photos/id/1/70/70" class="profile-pic img-fluid"-->
+			<%= avatar_for(@user) %>
+			<span class="item item-icon " data-toggle="tooltip" title="">
+				<i class="fas fa-list"></i>
+			</span>
+		</div>
+		<div class="tag">
+			<span class="name">
+				<%= @user.full_name %>
+			</span>
+			<p class="handle">
+				<%= "@#{@user.username}" %>
+			</p>
+		</div>
+	</div>
+	<div class="statistic">
+		<div class="item-group tweets">
+			<p class="item">
+				<%= @user.tweets.count %>
+			</p>
+			<p class="item-label">Tweets</p>
+		</div>
+		<div class="item-group following">
+			<p class="item">
+			<%= @user.following.count %>
+			</p>
+			<p class="item-label">Following</p>
+		</div>
+		<div class="item-group followers">
+			<p class="item">
+			<%= @user.followers.count%>
+			</p>
+			<p class="item-label">Followers</p>
+		</div>
+	</div>
+	<div class="followers">
+		<div class="main-headers">
+			<h4 class="header">Followed By</h4>
+		</div>
+		<% @user.followers.each do |follower| %>
+		<div class="followed-by">
+			<div class="bio">
+				<%= avatar_for(follower) %>
+				<div class="tag">
+					<span class="name">
+						<%= link_to follower.full_name, user_path(follower), class: 'is-link text-primary' %>
+					</span>
+					<span class="handle">
+						<%= "@#{follower.username}" %>
+					</span>
+				</div>
+			</div>
+		</div>
+		<% end %>
+		<%= no_followers(@user) %>
+	</div>
+
+	<div class="followers following pt-4">
+		<div class="main-headers">
+			<h4 class="header">Following</h4>
+		</div>
+		<% @user.following.each do |followed| %>
+		<div class="followed-by following">
+			<div class="bio">
+				<%= avatar_for(followed) %>
+				<div class="tag">
+					<span class="name">
+						<%= link_to followed.full_name, user_path(followed), class: 'is-link text-primary' %>
+					</span>
+					<span class="handle">
+						<%= "@#{followed.username}" %>
+					</span>
+				</div>
+			</div>
+		</div>
+		<% end %>
+		<%= no_following(@user)%>
+	</div>
+</div>

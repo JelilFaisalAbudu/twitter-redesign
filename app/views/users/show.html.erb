@@ -1,0 +1,12 @@
+<div class="col-9 pr-0">
+	<div class="cover-photo-container">
+		<%= cover_image_for(@user) %>
+	</div>
+	<%= render 'shared/main_headers' %>
+	<section class="feed-section">
+		<%= render 'user_feed' %>
+	</section>
+</div>
+<div class="col-3 who-to-follow">
+	<%= render 'user_social_profile' %>
+</div>

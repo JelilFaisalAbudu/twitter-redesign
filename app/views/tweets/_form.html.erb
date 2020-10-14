@@ -1,0 +1,20 @@
+<div class="card border-0">
+
+  <%= form_with(model: tweet, local: true, id: 'tweet-form') do |form| %>
+
+  <div class="form-group">
+    <div class="header new-tweet-header">
+      <%= form.label :text, 'Start a new tweet'%>
+    </div>
+    <div class="card-body">
+      <%= form.text_area :text, id: 'tweetFormControlTextarea', class: 'form-control', row: '3' %>
+      <div class="form-group">
+        <%= form.submit 'Send', class: 'btn btn-primary my-2' %>
+      </div>
+    </div>
+  </div>
+
+
+  <% end %>
+
+</div>

@@ -1,0 +1,46 @@
+	<div class="profile pt-3">
+		<div class="basic-details d-flex">
+			<%= avatar_for(current_user) %>
+			<div class="tag">
+				<span class="name"><%= current_user.full_name %></span>
+				<p class="handle"><%= "@#{current_user.username}" %></p>
+			</div>
+		</div>
+		<div class="followings">
+			<div class="item-group following">
+				<p class="item">
+					<%= current_user.following.count %>
+				</p>
+				<p class="item-label">Following</p>
+			</div>
+			<div class="item-group followers">
+				<p class="item">
+					<%= current_user.followers.count %>
+				</p>
+				<p class="item-label">Followers</p>
+			</div>
+		</div>
+	</div>
+	<div class="side-nav-item-wrapper d-flex align-items-center">
+		<i class="icon fas fa-home mr-"></i>
+		<%= link_to "Home", root_path, class: 'side-nav-item' %>
+	</div>
+	<div class="side-nav-item-wrapper d-flex align-items-center">
+		<i class="icon fas fa-user-circle"></i>
+		<%= link_to "Profile", user_path(current_user), class: 'side-nav-item' %>
+	</div>
+	<div class="side-nav-item-wrapper d-flex align-items-center">
+		<i class="icon fab fa-cc-discover"></i>
+		<%= link_to "Discover", root_path, class: 'side-nav-item' %>
+	</div>
+	<div class="side-nav-item-wrapper d-flex align-items-center">
+		<i class="icon fab fa-connectdevelop"></i>
+		<%= link_to "Connect", root_path, class: 'side-nav-item' %>
+	</div>
+	<div class="side-nav-item-wrapper d-flex align-items-center">
+		<i class="icon fas fa-info-circle"></i>
+		<%= link_to "Statistics", root_path, class: 'side-nav-item' %>
+	</div>
+	
+	
+	

@@ -1,0 +1,21 @@
+<li class="nav-item mx-4">
+	<%= link_to root_url, class: 'nav-link' do %>
+	<i class="fas fa-pencil-alt icon"></i>
+	<% end %>
+</li>
+<li class="nav-item mx-4">
+	<%= link_to root_url, class: 'nav-link' do %>
+	<i class="fas fa-search icon"></i>
+	<% end %>
+</li>
+<li class="nav-item dropdown ml-4">
+	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+		aria-expanded="false">
+		<i class="fa fa-cog icon" aria-hidden="true"></i>
+	</a>
+	<div class="dropdown-menu dropdown-menu-right">
+		<%= link_to current_user.username, user_path(current_user), class: 'dropdown-item' %>
+		<div class="dropdown-divider"></div>
+		<%= link_to "Sign out", sign_out_path, method: :delete, class: 'dropdown-item' %>
+	</div>
+</li>

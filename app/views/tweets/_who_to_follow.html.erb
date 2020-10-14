@@ -1,0 +1,21 @@
+<section class="main-headers">
+	<span class="header">Who to Follow</span>
+	<span>
+		<i class="fa fa-refresh" aria-hidden="true"></i>
+	</span>
+</section>
+<div class="to-follow my-4">
+	<% @who_to_follow.each do | user | %>
+	<div class="bio d-flex align-items-center my-3">
+		<%= avatar_for(user) %>
+		<div class="tag">
+			<span class="name d-block">
+				<%= link_to user.full_name, user_path(user), class: 'is-link name' %>
+			</span>
+			<span class="handle d-block text-muted">
+				<%= "@#{user.username}" %>
+			</span>
+		</div>
+	</div>
+<% end %>
+</div>

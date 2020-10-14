@@ -1,0 +1,173 @@
+body {
+  background-color: #f5f6f8 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.is-link:hover {
+  color: #a2a3a5;
+}
+
+.name {
+  text-transform: uppercase;
+}
+
+.handle {
+  text-transform: none;
+}
+
+.followings,
+.statistic {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.item-group {
+  border-right: 0.11em solid rgba(0, 0, 0, 0.125);
+}
+
+.item,
+.item-label {
+  margin: 0;
+}
+
+.followings .item {
+  color: #c2ceda;
+  font-weight: bolder;
+}
+
+.followings .item-label {
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.item-group:last-child {
+  border-right: none;
+}
+
+.statistic .item-group {
+  flex-grow: 1;
+  padding: 1.3em 0;
+}
+
+.followings .item-group {
+  width: 50%;
+  padding: 1.3em 0;
+}
+
+.right-column {
+  margin-left: 15.8em;
+}
+
+.top-navbar-container {
+  background-color: #54abee;
+}
+
+.top-navbar .fa,
+.top-navbar .fas {
+  font-size: 1.4em;
+}
+
+.top-navbar .nav-link {
+  color: #f5f6f8;
+
+  .icon {
+    color: inherit;
+  }
+}
+
+.top-navbar .navbar-brand:hover,
+.top-navbar .nav-item:hover {
+  background-color: rgba(205, 224, 236, 0.125);
+
+  .nav-link:hover {
+    color: #64a5d6;
+  }
+}
+
+.card {
+  border: none;
+  background-color: #fff;
+  margin: 2rem auto;
+}
+
+.card > .card-header,
+.card .form-group > .card-header {
+  background-color: #fff;
+}
+
+.main-headers {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  color: #a2a3a5;
+  font-size: 1.6rem;
+  padding: 0.6em;
+  text-transform: uppercase;
+}
+
+.header {
+  margin-right: 1.3em;
+  color: #a2a3a5;
+}
+
+.center-content .header:hover {
+  color: #54abee;
+}
+
+article .profile-pic {
+  margin-right: 1.2em;
+  width: 80px;
+  height: 80px;
+}
+
+.social-profile .profile-pic {
+  border-radius: 50%;
+  padding: 0.9em;
+}
+
+.social-profile .fas {
+  color: #b8b9bb;
+  padding: 0.5em;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.social-profile .handle,
+.social-profile .item-label {
+  color: #babbbd;
+}
+
+.social-profile .handle {
+  margin: 0;
+}
+
+.social-profile > .bio .tag {
+  text-align: center;
+}
+
+.social-profile .bio .item-group {
+  border: none;
+}
+
+.social-profile > .statistic {
+  margin-top: 2.2em;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  width: 100%;
+}
+
+.social-profile .followed-by {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 0;
+}
+
+.social-profile .followed-by > .bio {
+  display: flex;
+  flex-grow: 1;
+}

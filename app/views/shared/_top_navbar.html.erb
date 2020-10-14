@@ -1,0 +1,14 @@
+<nav class="navbar top-navbar navbar-expand-lg d-flex justify-content-between">
+	<%= link_to  root_url, class: 'navbar-brand' do %>
+		<i class="fab fa-creative-commons-share fa-3x text-white"></i>
+	<% end %>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+		aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+		<ul class="navbar-nav ">
+			<%= display_top_nav %>
+		</ul>
+	</div>
+</nav>

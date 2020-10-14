@@ -1,0 +1,11 @@
+<div class="center-content col-9 pr-0">
+  <%= render 'shared/main_headers' %>
+  <%= render 'tweets/form', tweet: @tweet %>
+  <section class="feed-section">
+    <%= render 'feed' %>
+  </section>
+</div>
+
+<div class="col-3 who-to-follow">
+  <%= render 'who_to_follow' %>
+</div>
